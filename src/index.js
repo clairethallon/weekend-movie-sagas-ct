@@ -34,8 +34,19 @@ function* fetchAllMovies() {
 }
 function* fetchAllGenres() {
     // get all movies from the DB
+
     try {
-        const genres = yield axios.get(`/api/genre/?id:${singlemovie}`);
+        console.log('+++++++', singlemovie.id);
+
+        let objectToSend = {
+            id: singlemovie.id
+        }.axios({
+            method: 'GET',
+            url: '/api/genre',
+            data: objectToSend
+        })
+
+        // const genres = yield axios.get('/api/genre/?id=' + singlemovie.id);
         console.log('get all genres:', genres.data);
         yield put({ type: 'SET_GENRES', payload: genres.data });
 
@@ -74,10 +85,14 @@ const genres = (state = [], action) => {
 const singlemovie = (state = [], action) => {
     switch (action.type) {
         case 'SET_SINGLE_MOVIE':
-            return action.payload;
+            state = action.payload;
+            console.log('========', state);
+            fetchAllGenres();
+            return state;
         default:
             return state;
     }
+
 }
 
 // Create one store that all components can use

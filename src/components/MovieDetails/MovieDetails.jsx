@@ -6,9 +6,9 @@ function MoveDetails() {
     const dispatch = useDispatch();
     const singlemovie = useSelector(store => store.singlemovie);
 
-    useEffect(() => {
-        dispatch({ type: 'FETCH_GENRES' });
-    }, []);
+    // useEffect(() => {
+    //     dispatch({ type: 'FETCH_GENRES' });
+    // }, []);
     return (
         <main>
             <h1>MovieDetails</h1>
