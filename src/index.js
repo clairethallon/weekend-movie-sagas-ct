@@ -18,6 +18,7 @@ function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
     yield takeEvery('FETCH_GENRES', fetchAllGenres);
     yield takeEvery('FETCH_GENRES', fetchSingleMovie);
+    yield takeEvery('ADD_MOVIE', postMovie);
 
 
     // yield takeEvery('FETCH_MOVIE_DETAILS', fetchMovieDetails);
@@ -87,7 +88,22 @@ function* fetchAllGenres(movie) {
 
 
 }
+function* postMovie(addmovie) {
+    // get all movies from the DB
+    console.log('~~~~~~ in post Movie', addmovie.payload);
 
+    try {
+        const response = yield axios.post(`/api/movie`, addmovie.payload);
+
+        console.log('adding movie :', response.data);
+        yield console.log('IN YIELD ADD MOVIE:', response.data);
+        // call single movie reducer and set single movie
+
+    } catch {
+        console.log('get all error');
+    }
+
+}
 const sagaMiddleware = createSagaMiddleware();
 
 // Used to store movies returned from the server
