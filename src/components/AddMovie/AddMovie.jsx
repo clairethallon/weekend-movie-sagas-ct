@@ -98,7 +98,7 @@ function AddMovie() {
     return (
         <main>
             <Link to="/" >
-                <button>Back to List</button>
+                <button>Cancel</button>
             </Link>
 
             <h2>Add Movie</h2>

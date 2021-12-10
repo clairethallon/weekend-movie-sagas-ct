@@ -2,3 +2,13 @@
     display : flex;
     flex-wrap: wrap;
 }
+
+.detailsMain{
+    justify-content: center;
+}
+
+.description{
+    background-color: darkgoldenrod;
+    /* max-width: 500px; */
+
+}

@@ -1,4 +1,17 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+.carddiv{
+    background-color: rgb(228, 228, 228);
+    border-radius: 30px;
+    max-width: 250px;
+    height: 250;
+    margin: 15px;
+    justify-content: center;
+}
+
+.movietitle{
+    font-family: 'Courier New', Courier, monospace;
 }

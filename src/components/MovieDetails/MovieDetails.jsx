@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from "react-router-dom"
+import './MovieDetails.css'
+
 
 
 function MoveDetails() {
@@ -21,7 +23,7 @@ function MoveDetails() {
                         <h2>{singlemovie.title}</h2>
                         <img src={singlemovie.poster} alt={singlemovie.title} />
 
-                        <p>{singlemovie.description}</p>
+                        <p class="description">{singlemovie.description}</p>
                     </div>
                 );
             })}
