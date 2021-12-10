@@ -6,16 +6,17 @@ router.get('/:id', (req, res) => {
 
   console.log('req', req.params);
 
-  const query = ` SELECT movies.title, genres.name  
+  const query = ` SELECT genres.name  
 	FROM movies_genres 
   JOIN genres ON genres.id = movies_genres.genre_id
   JOIN movies on movies.id = movies_genres.movie_id
-  WHERE movies_genres.movie_id = 1
+  WHERE movies_genres.movie_id = ${req.params.id}
   ORDER BY movies.title DESC;`;
   pool.query(query)
     .then(result => {
-      res.send('meow');
-      // 'result.rows'
+      console.log(result.rows);
+      res.send(result.rows);
+
     })
     .catch(err => {
       console.log('ERROR: Get all genres', err);
