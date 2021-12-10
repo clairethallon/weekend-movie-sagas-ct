@@ -32,23 +32,28 @@ function* fetchAllMovies() {
     }
 
 }
-function* fetchAllGenres() {
+function* fetchAllGenres(movie) {
     // get all movies from the DB
+    console.log('+++++++', movie.payload.id);
+
 
     try {
-        console.log('+++++++', singlemovie.id);
+        console.log(movie.id);
 
-        let objectToSend = {
-            id: singlemovie.id
-        }.axios({
-            method: 'GET',
-            url: '/api/genre',
-            data: objectToSend
-        })
+        // let objectToSend = {
+        //     id: movie.id
+        // }.axios({
+        //     method: 'GET',
+        //     url: '/api/genre',
+        //     data: objectToSend
+        // })
+
+        const response = yield axios.get(`/api/genre/${movie.payload.id}`);
 
         // const genres = yield axios.get('/api/genre/?id=' + singlemovie.id);
-        console.log('get all genres:', genres.data);
-        yield put({ type: 'SET_GENRES', payload: genres.data });
+        console.log('get all genres:', response.data);
+        // yield put({ type: 'SET_GENRES', payload: response.data });
+        // call single movie reducer and set single movie
 
     } catch {
         console.log('get all error');

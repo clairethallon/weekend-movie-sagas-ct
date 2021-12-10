@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
 
-  console.log('req', req.query);
+  console.log('req', req.params);
 
   const query = ` SELECT movies.title, genres.name  
 	FROM movies_genres 

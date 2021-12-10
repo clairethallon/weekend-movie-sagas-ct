@@ -20,7 +20,7 @@ function MovieList() {
                 {movies.map(movie => {
                     return (
                         <div key={movie.id} >
-                            <Link to="/details" onClick={() => dispatch({ type: 'SET_SINGLE_MOVIE', payload: movie })}>
+                            <Link to="/details" onClick={() => dispatch({ type: 'FETCH_GENRES', payload: movie })}>
                                 <h3>{movie.title}</h3>
                                 <img src={movie.poster} alt={movie.title} />
                             </Link></div>
