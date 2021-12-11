@@ -1,14 +1,51 @@
 .movies {
     display : flex;
     flex-wrap: wrap;
+    font-family: 'Libre Baskerville', serif;
+
 }
 
 .detailsMain{
     justify-content: center;
+    margin: 30px;
+    font-family: 'Libre Baskerville', serif;
+
 }
 
 .description{
-    background-color: darkgoldenrod;
-    /* max-width: 500px; */
+
+    font-size: medium;
+    padding-left: 50px;
+    padding-right: 50px;
 
 }
+
+.genreslist{
+    display: block;
+    display: flex;  
+    flex-wrap: nowrap; 
+    justify-content: center;
+    margin: 10px;
+    
+}
+.genreh3{
+text-decoration: underline;
+}
+
+.genresHeader{
+    display: block;
+    padding: 30px;
+}
+
+.detailsSub{
+    display : flex; 
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+
+/* #imgg{
+    margin-right: 20px;
+    margin-left: 50px;
+}  */

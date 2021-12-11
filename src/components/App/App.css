@@ -3,7 +3,10 @@
 justify-content: center;
 }
 
-
+.SagaTitle{
+  color: rgb(28, 54, 104);
+  font-family: 'Libre Baskerville', serif;
+}
 .App-header {
   background-color: #222;
   height: 150px;

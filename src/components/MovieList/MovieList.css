@@ -2,6 +2,8 @@
     display : flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-family: 'Libre Baskerville', serif;
+
 }
 .carddiv{
     background-color: rgb(228, 228, 228);
@@ -10,8 +12,14 @@
     height: 250;
     margin: 15px;
     justify-content: center;
+
 }
 
 .movietitle{
     font-family: 'Courier New', Courier, monospace;
+
+}
+main{
+    font-family: 'Libre Baskerville', serif;
+
 }

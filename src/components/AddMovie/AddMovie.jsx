@@ -97,8 +97,8 @@ function AddMovie() {
 
     return (
         <main>
-            <Link to="/" >
-                <button>Cancel</button>
+            <Link to="/" style={{ textDecoration: "none" }} >
+                <Button variant="outlined">Cancel</Button>
             </Link>
 
             <h2>Add Movie</h2>
@@ -154,7 +154,7 @@ function AddMovie() {
                     ))}
                 </TextField>
                 <br />
-                <Button onClick={addmovie}>ADD MOVIE</Button>
+                <Button onClick={addmovie} variant="outlined">ADD MOVIE</Button>
 
             </div>
         </main >

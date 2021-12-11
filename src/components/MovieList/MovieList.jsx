@@ -21,7 +21,11 @@ function MovieList() {
 
     return (
         <main>
+            <Link to="/addMovie" style={{ textDecoration: "none" }}>
+                <Button variant="outlined">Add Movie</Button>
+            </Link>
             <h1>MovieList</h1>
+
             <section className="movies">
                 {movies.map(movie => {
 
@@ -29,7 +33,7 @@ function MovieList() {
 
                         <div key={movie.id} class="carddiv">
                             <Link to="/details" style={{ textDecoration: "none" }} onClick={() => dispatch({ type: 'FETCH_GENRES', payload: movie })}>
-                                <h3>{movie.title}</h3>
+                                <h3 class='movietitle'>{movie.title}</h3>
                                 <Card sx={{ Width: "auto", height: 300, backgroundColor: "black" }} >
 
 
