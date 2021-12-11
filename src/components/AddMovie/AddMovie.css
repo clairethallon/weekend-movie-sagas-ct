@@ -2,3 +2,25 @@
     display : flex;
     flex-wrap: wrap;
 }
+
+.formDiv{
+    width: 250px;
+    text-align: left;
+    margin: auto;
+}
+
+main{
+    text-align: center;
+    background-color:  rgba(231, 231, 231, 0.445);
+    padding-bottom: 120px;
+}
+
+.formTitle{
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+h2{
+    margin-top: 0;
+    padding-top: 35px;
+}

@@ -3,23 +3,53 @@
     flex-wrap: wrap;
     justify-content: center;
     font-family: 'Libre Baskerville', serif;
+    /* padding-top: 50px; */
 
 }
+
 .carddiv{
-    background-color: rgb(228, 228, 228);
+    background-color:  rgba(79, 95, 126, 0.247);
     border-radius: 30px;
     max-width: 250px;
     height: 250;
     margin: 15px;
-    justify-content: center;
+    box-shadow: 2px 2px darkgray;
+
+}
+
+.carddiv:hover{
+    /* background-color: rgb(189, 189, 189); */
+    border-radius: 30px;
+    max-width: 250px;
+    height: 250;
+    margin: 15px;
+    justify-content: end;
+    border-style: solid; 
+    border: thin solid black;
+
+
 
 }
 
 .movietitle{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Libre Baskerville', serif;
+    color: black;
+     /* margin-right: 5px; */
+    margin-left: 15%; 
+    width: 70%;
+    justify-content: center;
+
+    
 
 }
+
 main{
     font-family: 'Libre Baskerville', serif;
 
+}
+
+h1{
+    padding-top: 35px;
+    margin-bottom: 15px;
+    margin-top: 0;
 }

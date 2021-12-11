@@ -21,20 +21,27 @@ function MovieList() {
 
     return (
         <main>
-            <Link to="/addMovie" style={{ textDecoration: "none" }}>
-                <Button variant="outlined">Add Movie</Button>
-            </Link>
-            <h1>MovieList</h1>
-
+            <div class="MovieListNav">
+                <h1>Movie List</h1>
+                <Link to="/addMovie" style={{ textDecoration: "none" }}>
+                    <Button variant="outlined" size="medium" style={{ marginBottom: 15 }}>Add Movie</Button>
+                </Link>
+            </div>
             <section className="movies">
                 {movies.map(movie => {
 
                     return (
 
-                        <div key={movie.id} class="carddiv">
-                            <Link to="/details" style={{ textDecoration: "none" }} onClick={() => dispatch({ type: 'FETCH_GENRES', payload: movie })}>
+                        <div key={movie.id} class="carddiv" >
+                            <Link to="/details" style={{
+                                textDecoration: "none", backgroundColor: "#bebebe", '&:hover': {
+                                    border: '1px', borderColor: 'primary.main'
+                                }
+                            }} onClick={() => dispatch({ type: 'FETCH_GENRES', payload: movie })}>
                                 <h3 class='movietitle'>{movie.title}</h3>
-                                <Card sx={{ Width: "auto", height: 300, backgroundColor: "black" }} >
+                                <Card sx={{
+                                    Width: "auto", height: 300, backgroundColor: "transparent", borderRadius: 5, boxShadow: 0
+                                }} >
 
 
                                     <CardContent>
@@ -45,13 +52,14 @@ function MovieList() {
                                             // height="auto"
                                             image={movie.poster}
                                             alt={movie.title}
+                                            sx={{
+                                                width: 175,
+                                                margin: 'auto',
+
+                                            }}
                                         />
-                                        {/* <Typography variant="body2" color="text.secondary">
-                                        {movie.description}
-                                    </Typography> */}
+
                                     </CardContent>
-                                    {/* <h3>{movie.title}</h3> */}
-                                    {/* <img src={movie.poster} alt={movie.title} /> */}
 
                                 </Card>
                             </Link>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import { useDispatch, useSelector } from 'react-redux';
+import './AddMovie.css'
 
 
 function AddMovie() {
@@ -97,55 +98,55 @@ function AddMovie() {
 
     return (
         <main>
-            <Link to="/" style={{ textDecoration: "none" }} >
-                <Button variant="outlined">Cancel</Button>
-            </Link>
 
             <h2>Add Movie</h2>
-            <div>
+            <div class="formDiv">
+                <p class="formTitle">Title</p>
                 <TextField
                     required
                     id="outlined-required"
-                    label="Title"
-                    margin="normal"
+                    margin="none"
                     onChange={handleTitleChange}
+                    sx={{ backgroundColor: "white" }}
 
                 />
                 <br />
-
+                <p class="formTitle">Poster Image URL</p>
                 <TextField
                     required
                     id="outlined-required"
-                    label="Poster Image"
-                    margin="normal"
+                    margin="none"
                     onChange={handlePosterChange}
+                    sx={{ backgroundColor: "white" }}
 
                 />
                 <br />
+                <p class="formTitle">Description</p>
+
                 <TextField
                     required
                     id="Multiline"
-                    label="Description"
                     multiline
                     rows={4}
-                    margin="normal"
+                    margin="none"
                     onChange={handleDescriptionChange}
+                    sx={{ backgroundColor: "white" }}
 
                 />
                 <br />
 
+                <p class="formTitle">Genre</p>
 
                 <TextField
                     id="outlined-select-currency-native"
                     select
-                    label="Genres"
-                    margin="normal"
+                    margin="none"
                     value={selectedgenre}
                     onChange={handleGenreChange}
+                    sx={{ backgroundColor: "white" }}
                     SelectProps={{
                         native: true,
                     }}
-                // helperText="Please select Genre"
                 >
                     {listOfGenres.map((option) => (
                         <option key={option.value} value={option.value}>
@@ -154,8 +155,13 @@ function AddMovie() {
                     ))}
                 </TextField>
                 <br />
-                <Button onClick={addmovie} variant="outlined">ADD MOVIE</Button>
+                <div class="formTitle">
+                    <Link to="/" style={{ textDecoration: "none", paddingRight: 15 }} >
+                        <Button variant="outlined" color="warning">Cancel</Button>
+                    </Link>
 
+                    <Button onClick={addmovie} variant="outlined">ADD MOVIE</Button>
+                </div>
             </div>
         </main >
 

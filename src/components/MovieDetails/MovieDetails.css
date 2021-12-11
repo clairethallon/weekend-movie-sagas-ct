@@ -9,6 +9,8 @@
     justify-content: center;
     margin: 30px;
     font-family: 'Libre Baskerville', serif;
+    margin-top: 0;
+    padding-top: 25px;
 
 }
 
@@ -30,11 +32,14 @@
 }
 .genreh3{
 text-decoration: underline;
+color:  rgb(79, 95, 126);
+;
 }
 
 .genresHeader{
     display: block;
-    padding: 30px;
+    margin: 30px;
+
 }
 
 .detailsSub{
@@ -45,7 +50,9 @@ text-decoration: underline;
 }
 
 
-/* #imgg{
-    margin-right: 20px;
-    margin-left: 50px;
-}  */
+img{
+    border-style: solid; 
+    border: thin solid rgb(79, 95, 126);
+
+
+}
