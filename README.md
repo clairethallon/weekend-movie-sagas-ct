@@ -21,7 +21,14 @@ A React application that allows users to add and manage a movie database. Users 
 
 ## Screenshots
 
+Home Page
 <img src="public/images/Home_Page.png" />
+
+Details Page
+<img src="public/images/Details_Page.png" />
+
+Add Movie
+<img src="public/images/Add_Movie.png" />
 
 ## Built With
 
