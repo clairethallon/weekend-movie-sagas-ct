@@ -49,8 +49,6 @@ Add Movie
 
 ### Prerequisites
 
-What do I need to install before I can run your project
-
 ### Installation
 
 HTML
@@ -67,8 +65,7 @@ Postgresql
 
 ## Usage
 
-How do I use your project
-
+For fun!
 
 ## License
 
